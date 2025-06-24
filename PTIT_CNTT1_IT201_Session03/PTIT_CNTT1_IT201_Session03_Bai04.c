@@ -60,6 +60,9 @@ int main(){
    int **arr= NULL;
    arr = insertArray(arr, &rows, &cols);
    findMinMax(arr, rows, cols);
-   free(arr);
+   for (int i = 0; i < rows; i++) {
+      free(arr[i]); 
+   }
+   free(arr); 
    return 0;
 }
