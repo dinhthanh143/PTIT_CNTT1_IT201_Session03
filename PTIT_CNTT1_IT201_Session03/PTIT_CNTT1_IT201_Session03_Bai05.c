@@ -65,6 +65,9 @@ int main(){
    int cols;
    arr = insertArray(arr, &rows, &cols);
    calMainAndSubDiagonal(arr, rows, cols);
+      for (int i = 0; i < rows; i++) {
+      free(arr[i]); 
+   }
    free(arr);
    return 0;
 }
