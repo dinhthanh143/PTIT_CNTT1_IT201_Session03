@@ -70,6 +70,9 @@ int main(){
    arr = insertArray(arr, &rows, &cols);
    printArray(arr, rows,cols);
    calSumSingularRow(arr, rows, cols);
+      for (int i = 0; i < rows; i++) {
+      free(arr[i]); 
+   }
    free(arr);
    return 0;
 }
