@@ -50,6 +50,9 @@ int main(){
    int *arr = NULL;
    int size;
    arr = insertArray(arr, &size);
+      for (int i = 0; i < rows; i++) {
+      free(arr[i]); 
+   }
    free(arr);
    return 0;
 }
